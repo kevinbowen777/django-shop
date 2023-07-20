@@ -1067,13 +1067,13 @@ files = [
 
 [[package]]
 name = "marshmallow"
-version = "3.20.0"
+version = "3.20.1"
 description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "marshmallow-3.20.0-py3-none-any.whl", hash = "sha256:217d7d47793c8cb240d94f96b0a00285213d1ac29cc2bd56019ac4cd6ff8852b"},
-    {file = "marshmallow-3.20.0.tar.gz", hash = "sha256:8041431562ff1f3f2692a28ef3fa67edddd925b23159707415e0eddb3bb40b06"},
+    {file = "marshmallow-3.20.1-py3-none-any.whl", hash = "sha256:684939db93e80ad3561392f47be0230743131560a41c5110684c16e21ade0a5c"},
+    {file = "marshmallow-3.20.1.tar.gz", hash = "sha256:5d2371bbe42000f2b3fb5eaa065224df7d8f8597bc19a1bbfa5bfe7fba8da889"},
 ]
 
 [package.dependencies]
