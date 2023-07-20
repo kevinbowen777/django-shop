@@ -1,0 +1,30 @@
+{% load static %}
+{# djlint:off D018 #}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Django, shopping" />
+    <meta name="description" content="A shopping web app built with Django" />
+    <title>
+      {% block title %}
+        Django-Shop
+      {% endblock title %}
+    </title>
+    <link href="{% static "img/favicon.ico" %}" rel="shortcut icon" type="image/x-icon" />
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <a href="/" class="logo">Django-Shop</a>
+    </div>
+    <div id="subheader">
+      <div class="cart">Your cart is empty.</div>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+</html>
