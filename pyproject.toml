@@ -65,6 +65,7 @@ safety = "2.4.0b1"
 Sphinx = "^7.0"
 werkzeug = "^2.3.6"
 furo = "^2023.5.20"
+django-types = "^0.17.0"
 
 [tool.black]
 line-length = 88
