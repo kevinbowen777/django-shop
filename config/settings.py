@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "django_extensions",
     # Local Applications
     "shop.apps.ShopConfig",
+    "cart.apps.CartConfig",
 ]
 
 MIDDLEWARE = [
@@ -114,11 +115,13 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = (str(BASE_DIR.joinpath("static")),)
 
+# Default primary key field type
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-# Default primary key field type
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+CART_SESSION_ID = "cart"
 
 # django-debug-toolbar
 # Note: disable when running Nox tests
