@@ -5,6 +5,7 @@ import nox
 
 nox.options.sessions = "lint", "safety", "tests"
 locations = (
+    "cart",
     "config",
     "shop",
     "./noxfile.py",
@@ -109,7 +110,6 @@ def tests(session):
         session,
         "coverage[toml]",
         "django-coverage-plugin",
-        "factory-boy",
         "pytest",
         "pytest-cov",
         "pytest-django",
@@ -117,8 +117,9 @@ def tests(session):
     # session.run("pytest", *args)
     session.run(
         "python",
-        "-Wonce::DeprecationWarning",
-        "-Im",
+        # "-Wonce::DeprecationWarning",
+        # "-Im",
+        "-m",
         "pytest",
         *args,
     )
