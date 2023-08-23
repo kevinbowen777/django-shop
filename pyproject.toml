@@ -50,7 +50,6 @@ coverage = { version = "^7.0.0", extras = ["toml"] }
 colorama = "^0.4.4"
 django-coverage-plugin = "^3.0.0"
 django-debug-toolbar = "^4.0.0"
-django-test-plus = "^2.2.0"
 djlint = "^1.31.0"
 friendly = "^0.7.0"
 ipython = "^8.4.0"
