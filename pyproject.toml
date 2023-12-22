@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-shop"
-version = "0.1.0"
+version = "0.2.0"
 description = "An online shop built with the Django web framework"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>",
@@ -18,7 +18,7 @@ documentation = "file:///docs/index.rst"
 keywords = ["django", "web-application", "shop"]
 
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
     "Environment :: Web Environment",
     "Framework :: Django",
     "Framework :: Django :: 5.0",
@@ -27,18 +27,18 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.12",
     "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
 ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 Django = "5.0"
 
-environs = { version = "^9.5.0", extras = ["django"] }
+environs = { version = "^10.0", extras = ["django"] }
 django-extensions = "^3.2"
 psycopg2-binary = "^2.9.5"
 pillow = "^10.0.0"
