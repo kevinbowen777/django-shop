@@ -232,5 +232,5 @@ friendly
 TODO: Add link to local coverage reports
 
  .. _django-shop: https://github.com/kevinbowen777/django-shop/
- .. _pyproject.toml: https://github.com/kevinbowen777/django-shop/blob/master/pyproject.toml  
+ .. _pyproject.toml: https://github.com/kevinbowen777/django-shop/blob/master/pyproject.toml
  .. _requirements.txt: https://github.com/kevinbowen777/django-shop/blob/master/requirements.txt
