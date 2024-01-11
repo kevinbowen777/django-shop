@@ -28,15 +28,14 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Internet :: WWW/HTTP",
-    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
 ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-Django = "5.0"
+Django = "5.0.1"
 
 environs = { version = "^10.0", extras = ["django"] }
 django-extensions = "^3.2"
