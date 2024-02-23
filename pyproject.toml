@@ -48,11 +48,11 @@ django-debug-toolbar = "^4.0.0"
 pre-commit = "^3.0.0"
 ruff = "^0.1.0"
 nox = "2023.4.22"
-black = "^23.0.0"
-pytest = "^7.2.0"
+black = "^24.0"
+pytest = "^8.0"
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
-pytest-sugar = "^0.9.4"
+pytest-sugar = "^1.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }
 django-coverage-plugin = "^3.0.0"
 djlint = "^1.31.0"
@@ -171,8 +171,7 @@ DJANGO_SETTINGS_MODULE = "config.test"
 addopts = "--reuse-db -p no:warnings"
 python_files = ["test_*.py"]
 filterwarnings = [
-    # "ignore::django.utils.deprecation.RemovedInDjango50Warning",
-    # "ignore::django.utils.deprecation.RemovedInDjango51Warning",
+    "ignore::django.utils.deprecation.RemovedInDjango51Warning",
 ]
 
 [tool.ruff]
