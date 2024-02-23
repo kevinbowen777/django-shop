@@ -1,4 +1,5 @@
 """Nox sessions - django-shop"""
+
 import tempfile
 
 import nox
