@@ -1,7 +1,7 @@
-# updated 20221117
+# updated 20240220
 # from: https://github.com/github/gitignore
-docker-compose-prod.yml
 
+docker-compose-prod.yml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
