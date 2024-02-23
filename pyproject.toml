@@ -27,6 +27,7 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -43,29 +44,28 @@ psycopg2-binary = "^2.9.5"
 pillow = "^10.0.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.0.0"
-coverage = { version = "^7.0.0", extras = ["toml"] }
-colorama = "^0.4.4"
-django-coverage-plugin = "^3.0.0"
 django-debug-toolbar = "^4.0.0"
-djlint = "^1.31.0"
-friendly = "^0.7.0"
-ipython = "^8.4.0"
-nox = "2023.4.22"
 pre-commit = "^3.0.0"
-pyopenssl = "^23.2.0"
+ruff = "^0.1.0"
+nox = "2023.4.22"
+black = "^23.0.0"
 pytest = "^7.2.0"
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
 pytest-sugar = "^0.9.4"
-ruff = "^0.1.0"
-safety = "2.4.0b2"
-Sphinx = "^7.0"
-werkzeug = "^3.0"
-sphinx = ">= 7.2.5, < 7.3.0"
-furo = "^2023.5.20"
-django-types = "^0.19.0"
+coverage = { version = "^7.0.0", extras = ["toml"] }
+django-coverage-plugin = "^3.0.0"
+djlint = "^1.31.0"
 sphinx-lint = "^0.9.1"
+safety = "^3.0"
+ipython = "^8.4.0"
+friendly = "^0.7.0"
+colorama = "^0.4.4"
+werkzeug = "^3.0"
+pyopenssl = ">=24.0, < 25.0"
+sphinx = ">= 7.2.5, < 7.3.0"
+furo = "^2024.0"
+django-types = "^0.19.0"
 
 [tool.black]
 line-length = 88
