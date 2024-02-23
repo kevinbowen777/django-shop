@@ -36,13 +36,6 @@ repos:
       # Run the formatter
       - id: ruff-format
 
-  - repo: https://github.com/psf/black
-    rev: 24.2.0
-    hooks:
-      - id: black
-        name: black
-        exclude: ^.*\b(migrations)\b.*$
-
   - repo: https://github.com/Riverside-Healthcare/djLint
     rev: v1.34.1
     hooks:
