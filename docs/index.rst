@@ -3,7 +3,7 @@ Django Start
 
 The purpose of the django-shop_ project is part of the collection of `Web Framework Projects`_ . This repository runs a Django 5.0.x application demonstrating some of the basic functionality also available in the applications listed in the Web Frameworks repository.
 
-.. _django-start: https://github.com/kevinbowen777/django-start
+.. _django-shop: https://github.com/kevinbowen777/django-shop
 .. _Web Framework Projects: https://github.com/kevinbowen777/web-project-index
 
 Getting Started
@@ -53,6 +53,7 @@ Project Information
    :hidden:
 
    testing
+   create_new_users
 
 .. toctree::
    :caption: Reference
