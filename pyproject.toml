@@ -46,7 +46,7 @@ Django = "5.1.1"
 
 environs = { version = "^11.0", extras = ["django"] }
 django-extensions = "^3.2"
-psycopg2-binary = "^2.9.5"
+psycopg = { version = "3.2.3", extras = ["binary"] } 
 pillow = "^10.0.0"
 
 [tool.poetry.group.dev.dependencies]
