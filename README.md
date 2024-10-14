@@ -31,14 +31,14 @@
      - Examples of using [Factories](https://pypi.org/project/factory-boy/) & [pytest](https://pypi.org/project/pytest/) fixtures in account app testing
      - [shell_plus](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) with [IPython](https://pypi.org/project/ipython/) via [django-extensions](https://pypi.python.org/pypi/django-extensions/) package
      - [Pre-commit](https://github.com/pre-commit/pre-commit)
-     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, and 3.12
+     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, 3.12, 3.13
          - [Sphinx](https://pypi.org/project/Sphinx/) documentation generation (`nox -s docs`)
          - linting (`nox -s lint`)
              - [ruff](https://pypi.org/project/ruff/)
              - [djlint](https://pypi.org/project/djlint/)
          - [safety](https://pypi.org/project/safety/)(python package vulnerability testing) (`nox -s safety`)
          - [pytest](https://docs.pytest.org/en/latest/) sessions with
-           [pytest-cov](https://pypi.org/project/pytest-cov/) &
+           [pytest-cov](https://pypi.org/project/pytest-cov/)
            [pytest-django](https://pypi.org/project/pytest-django/) (`coverage run -m pytest`)
   - `run` command menu
 
