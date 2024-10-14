@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-shop"
-version = "0.2.0"
+version = "0.2.1"
 description = "An online shop built with the Django web framework"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>",
@@ -35,6 +35,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Internet :: WWW/HTTP",
 ]
 
@@ -129,7 +130,7 @@ ignore = ["docs/_build"]
 defineConstant = { DEBUG = true }
 stubPath = ""
 # The following may need to be modified when collaborating with others
-venv = "django-shop-XlysjbEl-py3.12"
+venv = "django-shop-XlysjbEl-py3.13"
 venvPath = "../../../venvs"
 # More portable venv config
 # venvPath = "."
@@ -151,11 +152,11 @@ reportUnnecessaryCast = "warning"
 reportUnnecessaryComparison = "error"
 reportUnnecessaryTypeIgnoreComment = "warning"
 
-pythonVersion = "3.12"
+pythonVersion = "3.13"
 pythonPlatform = "Linux"
 
 executionEnvironments = [
-  { root = ".", pythonVersion = "3.12", extraPaths = [ "cart", "config", "shop" ] },
+  { root = ".", pythonVersion = "3.13", extraPaths = [ "cart", "config", "shop" ] },
 ]
 
 [tool.pytest.ini_options]
@@ -179,8 +180,8 @@ unsafe-fixes = false
 line-length = 88
 indent-width = 4
 
-# Assume Python 3.12.x
-target-version = "py312"
+# Assume Python 3.13.x
+target-version = "py313"
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
