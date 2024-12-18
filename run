@@ -90,7 +90,7 @@ function manage {
 }
 
 function nox:cov {
-  # Check code for test coverage
+  # Check code for formatting violations
   # cmd nox -s coverage-3.13 "${@}"
   nox -s coverage-3.13 "${@}"
 }
@@ -125,33 +125,31 @@ function nox:test {
   nox -s tests-3.13 "${@}"
 }
 
+function nox:current {
+  # Run code quality tests only for latest supported Python version
+  nox -s lint-3.13 "${@}"
+  nox -s coverage-3.13 "${@}"
+  nox -s safety-3.13 "${@}"
+  nox -s tests-3.13 "${@}"
+}
+
+function nox:re-current {
+  # Run tests only for latest supported Python version
+  # DO NOT REBUILD VENVS
+  nox -rs lint-3.13 "${@}"
+  nox -rs coverage-3.13 "${@}"
+  nox -rs safety-3.13 "${@}"
+  nox -rs tests-3.13 "${@}"
+}
+
 function nox:all {
   # Perform all nox code quality tests together
-  # cmd nox -s coverage-3.13 "${@}"
-  # cmd nox -s lint-3.13 "${@}"
-  # cmd nox -s pyright-3.13 "${@}"
-  # cmd nox -s safety-3.13 "${@}"
-  # cmd nox -s tests-3.13 "${@}"
-  # nox -s lint-3.13 "${@}"
-  # nox -s coverage-3.13 "${@}"
-  # nox -s pyright-3.13 "${@}"
-  # nox -s safety-3.13 "${@}"
-  # nox -s tests-3.13 "${@}"
   nox
 }
 
 function nox:re-all {
   # Perform all nox code quality tests together
-  # cmd nox -rs coverage-3.13 "${@}"
-  # cmd nox -rs lint-3.13 "${@}"
-  # cmd nox -rs pyright-3.13 "${@}"
-  # cmd nox -rs safety-3.13 "${@}"
-  # cmd nox -rs tests-3.13 "${@}"
-  # nox -rs lint-3.13 "${@}"
-  # nox -rs coverage-3.13 "${@}"
-  # nox -rs pyright-3.13 "${@}"
-  # nox -rs safety-3.13 "${@}"
-  # nox -rs tests-3.13 "${@}"
+  # DO NOT REBUILD VENVS
   nox -rs
 }
 
@@ -211,7 +209,7 @@ function sh {
 }
 
 function sh+ {
-  # Start a shell_plus IPython session in the web container
+  # Start a shell_plus session in the web container
   # auto-import all models, and the datetime module
   # cmd python manage.py shell_plus "${@}"
   python manage.py shell_plus
