@@ -1,25 +1,23 @@
-[tool.poetry]
+[project]
 name = "django-shop"
-version = "0.2.1"
+version = "0.2.2"
 description = "An online shop built with the Django web framework"
+requires-python = ">=3.10.0, <3.14.0"
+dependencies = [
+    "Django (==5.1.4)",
+    "environs[django] (>=11.0, <15.0)",
+    "django-extensions (>=3.2.0, <3.3.0)",
+    "psycopg[binary] (==3.2.3)",
+    "Pillow (>=11.0, <12.0)",
+]
 authors = [
-    "Kevin Bowen <kevin.bowen@gmail.com>",
+    { name = "Kevin Bowen", email = "kevin.bowen@gmail.com" },
 ]
 maintainers = [
 ]
-license = "MIT"
-
+license = { text = "MIT" }
 readme = "README.md"
-
-homepage = "https://github.com/kevinbowen777/django-shop.git"
-repository = "https://github.com/kevinbowen777/django-shop.git"
-documentation = "file:///docs/index.rst"
-
-keywords = [
-    "django",
-    "web-application",
-    "shop",
-]
+keywords = ["django","web-application","shop", ]
 
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -41,14 +39,11 @@ classifiers = [
 
 package-mode = false
 
-[tool.poetry.dependencies]
-python = "^3.10"
-Django = "5.1.4"
-
-environs = { version = "^11.0", extras = ["django"] }
-django-extensions = "^3.2"
-psycopg = { version = "3.2.3", extras = ["binary"] } 
-Pillow = ">=11.0, <12.0"
+[project.urls]
+Homepage = "https://github.com/kevinbowen777/django-shop.git"
+Changelog = "https://github.com/kevinbowen777/django-shop/NEWS"
+Repository = "https://github.com/kevinbowen777/django-shop.git"
+Documentation = "file:///docs/index.rst"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "^4.0.0"
@@ -262,5 +257,5 @@ docstring-code-format = false
 docstring-code-line-length = "dynamic"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
