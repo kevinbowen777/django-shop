@@ -6,6 +6,10 @@ export DJANGO_DEBUG=True
 
 export EMAIL_HOST_PASSWORD='<email_host_password>'
 
+# django-allauth SOCIALACCOUNT_PROVIDER client credentials
+GITHUB_SOCIALACCOUNT_APP_CLIENT_ID="<client_id_credential>"
+GITHUB_SOCIALACCOUNT_APP_SECRET="<app_secret>"
+
 # Enable BuildKit by default:
 #   https://docs.docker.com/develop/develop-images/build_enhancements
 export DOCKER_BUILDKIT=1
@@ -29,17 +33,19 @@ export WEB_CONCURRENCY=1
 #export PYTHON_MAX_THREADS=1
 
 export SECRET_KEY=<secret_key>
+# python -c 'import secrets; print(secrets.token_urlsafe(38))'
 # Uncomment the following three lines to run a sqlite3 db locally.
 # ENGINE_DB=django.db.backends.sqlite3
 # DATABASE_URL=sqlite:///django-shop.sqlite3
-# export POSTGRES_DB=django-shop.sqlite3
-DATABASE_URL=postgres://django_admin:<secret_key>@localhost:5432/message-board
+# POSTGRES_DB=django-shop.sqlite3
+DATABASE_URL=postgres://django_admin:<postgres_password>@localhost:5432/django-shop
+# ENGINE_DB=django.db.backends.postgresql
 export POSTGRES_USER=django_admin
 export POSTGRES_PASSWORD=<postgres_password>
 export POSTGRES_DB=django-shop
 # Use localhost for self-hosted PostgreSQL
 export POSTGRES_HOST=localhost
-# Use 'db' for Docker containers
+# Use db for Docker containers
 # export POSTGRES_HOST=db
 export POSTGRES_PORT=5432
 
@@ -77,10 +83,10 @@ export DOCKER_WEB_VOLUME=.:/code
 #export DOCKER_WEB_CPUS=0
 #export DOCKER_WEB_MEMORY=0
 
-# Used in production deployment
-# SECURE_SSL_REDIRECT=False
-# SECURE_HSTS_SECONDS=0
-# SECURE_HSTS_INCLUDE_SUBDOMAINS=False
-# SECURE_HSTS_PRELOAD=False
-# SESSION_COOKIE_SECURE=False
-# CSRF_COOKIE_SECURE=False
+# Used in production environment
+SECURE_SSL_REDIRECT=False
+SECURE_HSTS_SECONDS=0
+SECURE_HSTS_INCLUDE_SUBDOMAINS=False
+SECURE_HSTS_PRELOAD=False
+SESSION_COOKIE_SECURE=False
+CSRF_COOKIE_SECURE=False
