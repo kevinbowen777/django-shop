@@ -104,7 +104,6 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_L10N = True
 
 USE_TZ = True
 
@@ -115,7 +114,6 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = (str(BASE_DIR.joinpath("static")),)
 
 # Default primary key field type
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
