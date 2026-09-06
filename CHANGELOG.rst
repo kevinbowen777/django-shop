@@ -27,6 +27,38 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-shop 0.2.6 (2026-09-05)
+==============================
+
+Contributor-facing changes
+--------------------------
+
+-  (`#317 <https://github.com/kevinbowen777/django-shop/317>`_): Initial zizmor remediation. Pin GitHub actions to hashes.
+
+-  (`#319 <https://github.com/kevinbowen777/django-shop/319>`_): Update nox to 2026.8.10
+
+-  (`#319 <https://github.com/kevinbowen777/django-shop/319>`_): Update django-debug-toolbar to 7.1.1
+
+-  (`#319 <https://github.com/kevinbowen777/django-shop/319>`_): Update testing to Python 3.14.7, 3.13.15, and 3.12.14
+
+-  (`#324 <https://github.com/kevinbowen777/django-shop/324>`_): Update towncrier to 26.9.0
+
+-  (`#324 <https://github.com/kevinbowen777/django-shop/324>`_): Update psycopg to 3.3.5
+
+-  (`#324 <https://github.com/kevinbowen777/django-shop/324>`_): Upgrade to environs to 15.2.0
+
+-  (`#324 <https://github.com/kevinbowen777/django-shop/324>`_): Update django-debug-toolbar to 8.0.0
+
+-  (`#324 <https://github.com/kevinbowen777/django-shop/324>`_): Update djlint to 1.45.2
+
+-  (`#324 <https://github.com/kevinbowen777/django-shop/324>`_): Update nox to 2026.8.17
+
+
+New features
+------------
+
+-  (`#324 <https://github.com/kevinbowen777/django-shop/324>`_): Upgrade to Django 6.1.1
+
 django-shop 0.2.5 (2026-08-12)
 ==============================
 
