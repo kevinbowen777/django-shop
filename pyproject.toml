@@ -1,10 +1,10 @@
 [project]
 name = "django-shop"
-version = "0.2.7"
+version = "0.2.8"
 description = "An online shop built with the Django web framework"
 requires-python = ">=3.12.0"
 dependencies = [
-    "Django (==6.1.1)",
+    "Django (==6.1.2)",
     "environs[django] (==15.2.0)",
     "django-extensions (==4.1.0)",
     "psycopg[binary] (==3.3.6)",
@@ -38,7 +38,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/kevinbowen777/django-shop.git"
-Changelog = "https://github.com/kevinbowen777/django-shop/docs/source/CHANGELOG.rst"
+Changelog = "https://github.com/kevinbowen777/django-shop/docs/CHANGELOG.rst"
 Repository = "https://github.com/kevinbowen777/django-shop.git"
 Documentation = "file:///docs/html/index.html"
 
@@ -71,7 +71,7 @@ towncrier = "26.9.0"
 myst-parser = "5.1.0"
 
 [tool.poetry.requires-plugins]
-poetry-plugin-export = ">=1.10.0"
+poetry-plugin-export = ">=1.10.1"
 
 [tool.coverage.run]
 branch = true
@@ -267,10 +267,34 @@ issue_format = "`#{issue} <https://github.com/kevinbowen777/django-shop/{issue}>
 template = "changelog/_template.rst"
 
 [[tool.towncrier.type]]
+# Declarations of future API removals and breaking changes in behavior.
+directory = "deprecation"
+name = "Deprecations (removal in next major release)"
+showcontent = true
+
+[[tool.towncrier.type]]
 # Something we deemed an improper undesired behavior that got corrected
 # in the release to match pre-agreed expectations.
 directory = "bugfix"
 name = "Bug fixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+# New behaviors, public APIs, etc.
+directory = "feature"
+name = "New features"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Stuff that affects security. e.g. updating packages,
+directory = "security"
+name = "Security updated"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Notable updates to the documentation structure or build process.
+directory = "doc"
+name = "Improved documentation"
 showcontent = true
 
 [[tool.towncrier.type]]
@@ -281,33 +305,9 @@ name = "Contributor-facing changes"
 showcontent = true
 
 [[tool.towncrier.type]]
-# Declarations of future API removals and breaking changes in behavior.
-directory = "deprecation"
-name = "Deprecations (removal in next major release)"
-showcontent = true
-
-[[tool.towncrier.type]]
-# Notable updates to the documentation structure or build process.
-directory = "doc"
-name = "Improved documentation"
-showcontent = true
-
-[[tool.towncrier.type]]
-# New behaviors, public APIs, etc.
-directory = "feature"
-name = "New features"
-showcontent = true
-
-[[tool.towncrier.type]]
 # Changes that are hard to assign to any of the above categories.
 directory = "misc"
 name = "Miscellaneous internal changes"
-showcontent = true
-
-[[tool.towncrier.type]]
-# Stuff that affects security. e.g. updating packages,
-directory = "security"
-name = "Security updated"
 showcontent = true
 
 [[tool.towncrier.type]]

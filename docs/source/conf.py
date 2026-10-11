@@ -3,8 +3,8 @@
 # -- Project information ----------------------------------------------
 project = "django-shop"
 author = "Kevin Bowen"
-copyright = f"2024, {author}"
-release = "0.2.7"
+copyright = f"%Y, {author}"
+release = "0.2.8"
 
 # -- General configuration --------------------------------------------
 extensions = [
