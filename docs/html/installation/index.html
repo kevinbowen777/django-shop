@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Configuration" href="../configuration/index.html"><link rel="prev" title="Django Start" href="../index.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Local Installation" href="local_installation.html"><link rel="prev" title="Django Start" href="../index.html">
         <link rel="prefetch" href="../_static/django_24.png" as="image">
 
     <link rel="shortcut icon" href="../_static/django_24.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Testing - django-shop</title>
+        <title>Installation - django-shop</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -173,7 +173,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -196,14 +196,17 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#running-the-tests">Running the Tests</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../configuration/index.html">Configuration</a><input aria-label="Toggle navigation of Configuration" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Installation</a><input aria-label="Toggle navigation of Installation" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="local_installation.html">Local Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker_installation.html">Docker Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configuration/index.html">Configuration</a><input aria-label="Toggle navigation of Configuration" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/env_setup.html">Environment Variable Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/server_startup.html">Starting the Server</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../features/index.html">Features</a><input aria-label="Toggle navigation of Features" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../features/index.html">Features</a><input aria-label="Toggle navigation of Features" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../features/application_features.html">Application features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../features/dev_test_features.html">Dev &amp; Testing Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../features/run_command_features.html">The run command script</a></li>
@@ -214,6 +217,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Testing</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/index.html#running-the-tests">Running the Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testing/create_new_users.html">Create new users</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
@@ -255,87 +260,25 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="testing">
-<h1>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Assuming that this project has been installed with <code class="docutils literal notranslate"><span class="pre">poetry</span></code>, most of the
-commands in this document should be prefaced with <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>.</p>
-</div>
-<p>Running tests against this project can be done in several ways:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>Running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">test</span></code></p></li>
-<li><p>Using <code class="docutils literal notranslate"><span class="pre">coverage</span></code></p></li>
-<li><p>Running the <code class="docutils literal notranslate"><span class="pre">nox</span></code> test suite</p></li>
-</ol>
-</div></blockquote>
-<p>A number of the tests can be executed via the <code class="docutils literal notranslate"><span class="pre">run</span></code> file. See the contents of
-this file for how these tests can be run.</p>
-<p>If you would like to create “test” or “dummy” users, see the <span class="xref std std-doc">create_new_users</span> sections for examples.</p>
-</section>
-<section id="running-the-tests">
-<h1>Running the Tests<a class="headerlink" href="#running-the-tests" title="Link to this heading">¶</a></h1>
-<section id="using-coverage">
-<h2>Using <code class="docutils literal notranslate"><span class="pre">coverage</span></code><a class="headerlink" href="#using-coverage" title="Link to this heading">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>coverage<span class="w"> </span>run<span class="w"> </span>-m<span class="w"> </span>pytest
-<span class="gp">$ </span>coverage<span class="w"> </span>report
-<span class="gp">$ </span>coverage<span class="w"> </span>html<span class="w"> </span><span class="o">(</span>this<span class="w"> </span>will<span class="w"> </span>generate<span class="w"> </span>html<span class="w"> </span>reports<span class="w"> </span>available<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span><span class="sb">``</span>htmlcov<span class="sb">``</span><span class="w"> </span>directory<span class="o">)</span>
+          <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<p>This project has been developed and tested entirely on a Debian Linux system.  This project was built using <a class="reference external" href="https://python-poetry.org">poetry</a> as its Python dependency management tools.  The instructions provided within this documentation reflect that assumption. It is intended to be run either locally or within a Docker container.</p>
+<section id="cloning-the-project">
+<h2>Cloning the project<a class="headerlink" href="#cloning-the-project" title="Link to this heading">¶</a></h2>
+<p>To install the <code class="docutils literal notranslate"><span class="pre">django-shop</span></code> project, run the following command in your terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/kevinbowen777/django-shop.git
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>django-start
 </pre></div>
 </div>
-</section>
-<section id="using-the-nox-test-suite">
-<h2>Using the <code class="docutils literal notranslate"><span class="pre">nox</span></code> test suite<a class="headerlink" href="#using-the-nox-test-suite" title="Link to this heading">¶</a></h2>
-<p>The following sessions are available to run via <code class="docutils literal notranslate"><span class="pre">nox</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">coverage</span><span class="o">-</span><span class="mf">3.12</span> <span class="o">-&gt;</span> <span class="n">Build</span> <span class="n">JSON</span> <span class="n">coverage</span> <span class="n">report</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">coverage</span><span class="o">-</span><span class="mf">3.13</span> <span class="o">-&gt;</span> <span class="n">Build</span> <span class="n">JSON</span> <span class="n">coverage</span> <span class="n">report</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">coverage</span><span class="o">-</span><span class="mf">3.14</span> <span class="o">-&gt;</span> <span class="n">Build</span> <span class="n">JSON</span> <span class="n">coverage</span> <span class="n">report</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">docs</span><span class="o">-</span><span class="mf">3.12</span> <span class="o">-&gt;</span> <span class="n">Build</span> <span class="n">the</span> <span class="n">documentation</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">docs</span><span class="o">-</span><span class="mf">3.13</span> <span class="o">-&gt;</span> <span class="n">Build</span> <span class="n">the</span> <span class="n">documentation</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">docs</span><span class="o">-</span><span class="mf">3.14</span> <span class="o">-&gt;</span> <span class="n">Build</span> <span class="n">the</span> <span class="n">documentation</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">lint</span><span class="o">-</span><span class="mf">3.12</span> <span class="o">-&gt;</span> <span class="n">Lint</span> <span class="n">using</span> <span class="n">ruff</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">lint</span><span class="o">-</span><span class="mf">3.13</span> <span class="o">-&gt;</span> <span class="n">Lint</span> <span class="n">using</span> <span class="n">ruff</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">lint</span><span class="o">-</span><span class="mf">3.14</span> <span class="o">-&gt;</span> <span class="n">Lint</span> <span class="n">using</span> <span class="n">ruff</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">pyright</span><span class="o">-</span><span class="mf">3.12</span> <span class="o">-&gt;</span> <span class="n">Run</span> <span class="n">pyright</span> <span class="nb">type</span> <span class="n">checker</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">pyright</span><span class="o">-</span><span class="mf">3.13</span> <span class="o">-&gt;</span> <span class="n">Run</span> <span class="n">pyright</span> <span class="nb">type</span> <span class="n">checker</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">pyright</span><span class="o">-</span><span class="mf">3.14</span> <span class="o">-&gt;</span> <span class="n">Run</span> <span class="n">pyright</span> <span class="nb">type</span> <span class="n">checker</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">audit</span><span class="o">-</span><span class="mf">3.12</span> <span class="o">-&gt;</span> <span class="n">Scan</span> <span class="n">dependencies</span> <span class="k">for</span> <span class="n">insecure</span> <span class="n">packages</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">audit</span><span class="o">-</span><span class="mf">3.13</span> <span class="o">-&gt;</span> <span class="n">Scan</span> <span class="n">dependencies</span> <span class="k">for</span> <span class="n">insecure</span> <span class="n">packages</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">audit</span><span class="o">-</span><span class="mf">3.14</span> <span class="o">-&gt;</span> <span class="n">Scan</span> <span class="n">dependencies</span> <span class="k">for</span> <span class="n">insecure</span> <span class="n">packages</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">tests</span><span class="o">-</span><span class="mf">3.12</span> <span class="o">-&gt;</span> <span class="n">Run</span> <span class="n">the</span> <span class="n">test</span> <span class="n">suite</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">tests</span><span class="o">-</span><span class="mf">3.13</span> <span class="o">-&gt;</span> <span class="n">Run</span> <span class="n">the</span> <span class="n">test</span> <span class="n">suite</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">tests</span><span class="o">-</span><span class="mf">3.14</span> <span class="o">-&gt;</span> <span class="n">Run</span> <span class="n">the</span> <span class="n">test</span> <span class="n">suite</span><span class="o">.</span>
-
-<span class="n">sessions</span> <span class="n">marked</span> <span class="k">with</span> <span class="o">*</span> <span class="n">are</span> <span class="n">selected</span><span class="p">,</span> <span class="n">sessions</span> <span class="n">marked</span> <span class="k">with</span> <span class="o">-</span> <span class="n">are</span> <span class="n">skipped</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">lint</span></code>, <code class="docutils literal notranslate"><span class="pre">coverage</span></code>, and <code class="docutils literal notranslate"><span class="pre">tests</span></code> are enabled to be run with <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">tests</span></code>. Generating documentation, (e.g. <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">docs-3.14</span></code>) need to be run explicitly.</p>
-<p>Below are some example of <code class="docutils literal notranslate"><span class="pre">nox</span></code> commands run locally:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nox<span class="w"> </span>--list-sessions
-<span class="gp">$ </span>nox
-<span class="gp">$ </span>nox<span class="w"> </span>-s<span class="w"> </span>docs-3.14
-<span class="gp">$ </span>nox<span class="w"> </span>-rs<span class="w"> </span>lint-3.13<span class="w">  </span><span class="o">(</span>Use<span class="w"> </span>the<span class="w"> </span><span class="s1">'r'</span><span class="w"> </span>flag<span class="w"> </span>to<span class="w"> </span>reuse<span class="w"> </span>existing<span class="w"> </span>session<span class="o">)</span>
-<span class="gp">$ </span>nox<span class="w"> </span>-s<span class="w"> </span>coverage-3.12
-<span class="gp">$ </span>nox<span class="w"> </span>-s<span class="w"> </span>pyright-3.14
-<span class="gp">$ </span>nox<span class="w"> </span>-s<span class="w"> </span>audit<span class="w">  </span><span class="o">(</span>will<span class="w"> </span>run<span class="w"> </span>tests<span class="w"> </span>against<span class="w"> </span>all<span class="w"> </span>available<span class="w"> </span>Python<span class="w"> </span>versions<span class="o">)</span>
-<span class="gp">$ </span>nox<span class="w"> </span>-s<span class="w"> </span>tests
-</pre></div>
-</div>
-<p>Below are examples of <code class="docutils literal notranslate"><span class="pre">nox</span></code> tests run against the Docker container:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span><span class="nb">test</span>
-<span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>nox<span class="w"> </span>--list-sessions
-<span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>nox
-<span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>nox<span class="w"> </span>-s<span class="w"> </span>coverage-3.12
-<span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>nox<span class="w"> </span>-s<span class="w"> </span>docs-3.14
-<span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>nox<span class="w"> </span>-rs<span class="w"> </span>lint-3.13<span class="w">  </span><span class="o">(</span>Use<span class="w"> </span>the<span class="w"> </span><span class="s1">'r'</span><span class="w"> </span>flag<span class="w"> </span>to<span class="w"> </span>reuse<span class="w"> </span>existing<span class="w"> </span>session<span class="o">)</span>
-<span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>nox<span class="w"> </span>-s<span class="w"> </span>audit<span class="w">  </span><span class="o">(</span>will<span class="w"> </span>run<span class="w"> </span>tests<span class="w"> </span>against<span class="w"> </span>all<span class="w"> </span>Python<span class="w"> </span>versions<span class="o">)</span>
-<span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>web<span class="w"> </span>nox<span class="w"> </span>-s<span class="w"> </span>tests
-</pre></div>
+<p>Depending on your needs and preferences, see either the
+<a class="reference internal" href="local_installation.html"><span class="doc">Local Installation</span></a> or <a class="reference internal" href="docker_installation.html"><span class="doc">Docker Installation</span></a> page for additional
+installation instructions.</p>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 </section>
@@ -345,12 +288,12 @@ this file for how these tests can be run.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../configuration/index.html">
+          <a class="next-page" href="local_installation.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Configuration</div>
+                <div class="title">Local Installation</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -369,13 +312,13 @@ this file for how these tests can be run.</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2024, Kevin Bowen
+                Copyright &#169; 2026, Kevin Bowen
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Sep 23, 2026</div>
+              Last updated on Oct 26, 2026</div>
           </div>
           <div class="right-details">
             
@@ -384,13 +327,32 @@ this file for how these tests can be run.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#cloning-the-project">Cloning the project</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=58050c01"></script>
+</div><script src="../_static/documentation_options.js?v=14672bda"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
