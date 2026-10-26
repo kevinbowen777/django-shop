@@ -27,6 +27,36 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-shop 0.2.9 (2026-10-26)
+==============================
+
+Security updated
+----------------
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Update pillow to 13.0.0
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Update certifi to 2026.10.19
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Update .python-version with 3.14.9, 3.13.17
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Update pip to 26.2.2
+
+
+Improved documentation
+----------------------
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Remove legacy license classifier
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Update djlint to 1.47.1
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Update ruff rules & fix reported errors
+
+-  (`#336 <https://github.com/kevinbowen777/django-shop/336>`_): Update nox to 2026.10.20
+
 django-shop 0.2.8 (2026-10-11)
 ==============================
 

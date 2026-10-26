@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.db import models
 from django.urls import reverse
 
@@ -7,8 +9,8 @@ class Category(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
 
     class Meta:
-        ordering = ["name"]
-        indexes = [
+        ordering: ClassVar[list[str]] = ["name"]
+        indexes: ClassVar[list] = [
             models.Index(fields=["name"]),
         ]
         verbose_name = "category"
@@ -35,8 +37,8 @@ class Product(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["name"]
-        indexes = [
+        ordering: ClassVar[list[str]] = ["name"]
+        indexes: ClassVar[list] = [
             models.Index(fields=["id", "slug"]),
             models.Index(fields=["name"]),
             models.Index(fields=["-created"]),
