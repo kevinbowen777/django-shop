@@ -27,6 +27,30 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-shop 0.2.10 (2026-11-11)
+===============================
+
+Security updated
+----------------
+
+-  (`#338 <https://github.com/kevinbowen777/django-shop/338>`_): Update psycopg to 3.3.8
+
+-  (`#338 <https://github.com/kevinbowen777/django-shop/338>`_): Update pip to 26.3
+
+-  (`#338 <https://github.com/kevinbowen777/django-shop/338>`_): Update Django to 6.1.3
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#338 <https://github.com/kevinbowen777/django-shop/338>`_): Update djlint to 1.50.0
+
+-  (`#338 <https://github.com/kevinbowen777/django-shop/338>`_): Update coverage to 7.17.2
+
+-  (`#338 <https://github.com/kevinbowen777/django-shop/338>`_): Update myst-parser to 5.2.0
+
+-  (`#339 <https://github.com/kevinbowen777/django-shop/339>`_): Upgrade BitBucket remote repo URL
+
 django-shop 0.2.9 (2026-10-26)
 ==============================
 
